@@ -4,9 +4,9 @@ using System.Text;
 
 namespace DocuSign.WeatherDressCode.Services.Models
 {
-    public class InputDressCodeSequence
+    public class Command
     {
-	    public Enums.TempCode Code { get; set; }
-	    public List<Command> Commands { get; set; }
+	    public int CommandKey { get; set; }
+		public bool IsInvalid { get; set; }
     }
 }

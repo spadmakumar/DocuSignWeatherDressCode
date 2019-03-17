@@ -40,56 +40,56 @@ namespace DocuSign.WeatherDressCode.Services.Singleton
 					new WeatherDressCodeInstruction
 					{
 						Command = 1,
-						Description = "Put on footwear",
+						Description = Enums.DressCodeDescription.PutOnFootwear,
 						HotResponse = "sandals",
 						ColdResponse = "boots"
 					},
 					new WeatherDressCodeInstruction
 					{
 						Command = 2,
-						Description = "Put on headwear",
+						Description = Enums.DressCodeDescription.PutOnHeadwear,
 						HotResponse = "sun visor",
 						ColdResponse = "hat"
 					},
 					new WeatherDressCodeInstruction
 					{
 						Command = 3,
-						Description = "Put on socks",
+						Description = Enums.DressCodeDescription.PutOnSocks,
 						HotResponse = "fails	",
 						ColdResponse = "socks"
 					},
 					new WeatherDressCodeInstruction
 					{
 						Command = 4,
-						Description = "Put on shirt",
+						Description = Enums.DressCodeDescription.PutOnShirt,
 						HotResponse = "t-shirt",
 						ColdResponse = "shirt"
 					},
 					new WeatherDressCodeInstruction
 					{
 						Command = 5,
-						Description = "Put on jacket",
+						Description = Enums.DressCodeDescription.PutOnJacket,
 						HotResponse = "fail",
 						ColdResponse = "jacket"
 					},
 					new WeatherDressCodeInstruction
 					{
 						Command = 6,
-						Description = "Put on pants",
+						Description = Enums.DressCodeDescription.PutOnPants,
 						HotResponse = "shorts",
 						ColdResponse = "pants"
 					},
 					new WeatherDressCodeInstruction
 					{
 						Command = 7,
-						Description = "Leave house",
+						Description = Enums.DressCodeDescription.LeaveHouse,
 						HotResponse = "leaving house",
 						ColdResponse = "leaving house"
 					},
 					new WeatherDressCodeInstruction
 					{
 						Command = 8,
-						Description = "Take off pajamas",
+						Description = Enums.DressCodeDescription.TakeOffPajamas,
 						HotResponse = "Removing PJs",
 						ColdResponse = "Removing PJs"
 					}
