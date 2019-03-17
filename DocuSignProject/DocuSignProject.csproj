@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DocuSign.TemperatureDressCode.Services\DocuSign.WeatherDressCode.Services.csproj" />
+    <ProjectReference Include="..\DocuSign.WeatherDressCode.Services\DocuSign.WeatherDressCode.Services.csproj" />
   </ItemGroup>
 
 </Project>

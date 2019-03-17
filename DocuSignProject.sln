@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocuSignProject", "DocuSignProject\DocuSignProject.csproj", "{201BF739-6F0E-4A37-B106-186E0BDD55D1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocuSign.WeatherDressCode.Services", "DocuSign.TemperatureDressCode.Services\DocuSign.WeatherDressCode.Services.csproj", "{5F8AFFF2-10CA-41FB-9E89-19B2C05EEA8E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocuSign.WeatherDressCode.Services", "DocuSign.WeatherDressCode.Services\DocuSign.WeatherDressCode.Services.csproj", "{5F8AFFF2-10CA-41FB-9E89-19B2C05EEA8E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
