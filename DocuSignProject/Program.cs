@@ -1,6 +1,7 @@
 ﻿using SimpleInjector;
 using System;
 using System.Collections.Generic;
+using System.Numerics;
 using DocuSign.WeatherDressCode.Services.Models;
 using DocuSign.WeatherDressCode.Services.Services;
 
@@ -13,34 +14,44 @@ namespace DocuSignProject
 			//Creating the container for DI
 	        var container = new Container();
 	        DIHelper.Register(container);
-	        DIHelper.RegisterSingleton(container);
 	        container.Verify();
 
 	        var serviceProvider = container.GetInstance<WeatherDressCodeSequencingService>();
-			var input = new InputDressCodeSequence();
-	        input.Code = Enums.TempCode.Hot;
-			input.Commands = new List<Command>
-			{
-				new Command
-				{
-					CommandKey = 8
-				},
-				new Command
-				{
-					CommandKey = 6
-				},
-				new Command
-				{
-					CommandKey = 3
-				},
-				new Command
-				{
-					CommandKey = 5
-				}
-			};
-	        serviceProvider.GetValidDressCode(input);
-			Console.WriteLine("Welcome to Docusign Project");
+			Console.WriteLine("Please enter Temp Code(Hot or Cold) and Dress code commands");
+	        Input(serviceProvider);
+
 	        Console.ReadKey();
         }
+
+	    private static void Input(WeatherDressCodeSequencingService serviceProvider)
+	    {
+		    var userInput = Console.ReadLine();
+		    var codeAndCommands = userInput?.Split(' ');
+		    if (codeAndCommands != null)
+		    {
+			    var input = new InputDressCodeSequence {Commands = new List<Command>()};
+			    foreach (var instruction in codeAndCommands)
+			    {
+				    switch (instruction.ToLower())
+				    {
+					    case "cold":
+						    input.Code = Enums.TempCode.Cold;
+						    continue;
+					    case "hot":
+						    input.Code = Enums.TempCode.Hot;
+						    continue;
+				    }
+
+				    input.Commands.Add(new Command {CommandKey = Int32.Parse(instruction)});
+			    }
+
+			    var dressCodeResponse = serviceProvider.GetValidDressCode(input);
+			    foreach (var response in dressCodeResponse.ResponseList)
+			    {
+				    Console.WriteLine(response);
+			    }
+		    }
+		    Input(serviceProvider);
+		}
     }
 }

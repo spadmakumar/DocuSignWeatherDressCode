@@ -4,9 +4,9 @@ using System.Text;
 using DocuSign.WeatherDressCode.Services.Models;
 using DocuSign.WeatherDressCode.Services.RuleBook.CommonValidations;
 
-namespace DocuSign.WeatherDressCode.Services.RuleBook.HotValidDressSequences
+namespace DocuSign.WeatherDressCode.Services.RuleBook.ColdValidDressSequences
 {
-    public interface IHotDressValidations : IDressValidation
+    public interface IColdDressValidations : IDressValidation
     {
-    }
+	}
 }

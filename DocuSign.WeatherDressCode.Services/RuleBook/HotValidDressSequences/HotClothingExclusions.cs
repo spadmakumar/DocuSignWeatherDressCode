@@ -9,10 +9,10 @@ using DocuSign.WeatherDressCode.Services.Singleton;
 
 namespace DocuSign.WeatherDressCode.Services.RuleBook.HotValidDressSequences
 {
-    public class HotDressValidation1 : IHotDressValidations
+    public class HotClothingExclusions : IHotDressValidations
 	{
 	    private static IList<int> _invalidCommands = new List<int>();
-		public HotDressValidation1()
+		public HotClothingExclusions()
 		{
 			CreateValidationList();
 		}
